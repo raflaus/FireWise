@@ -12,23 +12,30 @@
         body {
             font-family: 'Rubik', sans-serif;
         }
-        h1 {
-            font-weight: 700;
-        }
-        a, p {
-            font-weight: 400;
+        nav {
+            font-weight: 500;
         }
     </style>
-    <nav class="bg-blue-500 text-white py-8">
-        <div class="container mx-auto">
-            <ul class="flex justify-center">
-                <li class="mx-4 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                        <path fill-rule="evenodd" d="M4 4a4 4 0 014-4h4a4 4 0 014 4v2a4 4 0 014 4v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4a4 4 0 01-4-4V4zm4 0a4 4 0 00-4 4v4a4 4 0 004 4h4a4 4 0 004-4V8a4 4 0 00-4-4H8z" clip-rule="evenodd" />
-                    </svg>
-                    <a href="#" class="hover:text-blue-300">About</a>
-                </li>
-                <li class="mx-4 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M4 6a1 1 0 011-1h.5a.5.5 0 000-1H5a2 2 0 00-2 2v8a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2h-.5a.5.5 0 000 1H15a1 1 0 011 1v1a1 1 0 01-1 1H5a1 1 0 01-1-1V6zm6 4a1 1 0 000 2h1a1 1 0 100-2h-1zm-4 0a1 1 0 000 2h1a1 1 0 
+    <nav class="bg-blue-500 text-white py-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a5 5 0 1110 0H3zm10.707-2.707A1 1 0 0115 14v1a1 1 0 01-1 1h-3v-1a1 1 0 011-1h1.586A1.5 1.5 0 0012 12.5V11a1 1 0 011-1h1.5a1.5 1.5 0 000-3H14a1 1 0 110-2h1a3 3 0 010 6H14a1 1 0 01-1 1v1.5a1.5 1.5 0 00.707 2.293z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-xl">BVFD</span>
+            </div>
+            <ul class="flex space-x-8">
+                <li><a href="#" class="hover:text-blue-300">About</a></li>
+                <li><a href="#" class="hover:text-blue-300">Batteries</a></li>
+                <li><a href="#" class="hover:text-blue-300">How-Tos</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="container mx-auto mt-10 px-4">
+        <h1 class="text-4xl font-bold">Welcome to Our Website</h1>
+        <p class="mt-4 text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam enim quis quos deserunt, reprehenderit tempore atque sequi cumque eum, impedit harum, accusamus libero dolore nemo nobis amet ratione consequatur quod!
+        </p>
+    </header>
+</body>
+</html>
