@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/outline.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v3.x.x/dist/cdn.min.js" defer></script>
 </head>
- <style>
-        body {
-            font-family: 'Rubik', sans-serif;
-        }
-        nav {
-            font-weight: 500;
-        }
-    </style>
-<body class="bg-slate-100 font-sans">
-    <nav class="bg-slate-50 text-slate-900 py-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-</svg>
-                <span class="text-xl">FireWise</span>
-            </div>
-            <ul class="flex space-x-8">
-                <li><a href="#" class="hover:text-blue-300">About</a></li>
-                <li><a href="#" class="hover:text-blue-300">Batteries</a></li>
-                <li><a href="#" class="hover:text-blue-300">How-Tos</a></li>
-                <li><a href="#" class="hover:text-blue-300">BVFD</a></li>
-            </ul>
+<body>
+  <header class="bg-white shadow-sm" x-data="{ open: false }">
+    <nav class="container mx-auto px-4 py-4 font-rubik">
+      <div class="flex justify-between items-center">
+        <a href="#" class="text-xl font-bold">FireWise</a>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">Home</a>
+          <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">About</a>
+          <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">Services</a>
+          <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">Contact</a>
         </div>
+        <button @click="open = !open" class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div class="md:hidden" x-show="open">
+        <div class="bg-gray-100 mt-2 p-4 rounded shadow-lg">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">About</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">How-Tos</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Battery Recycling</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">BVFD</a>
+        </div>
+      </div>
     </nav>
-    <header class="container mx-auto mt-10 px-4">
-        <h1 class="text-4xl font-bold">Welcome to Our Website</h1>
-        <p class="mt-4 text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam enim quis quos deserunt, reprehenderit tempore atque sequi cumque eum, impedit harum, accusamus libero dolore nemo nobis amet ratione consequatur quod!
-        </p>
-    </header>
+  </header>
+
+  <section>
+   
+  </section>
 </body>
 </html>
