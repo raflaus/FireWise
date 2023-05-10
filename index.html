@@ -29,8 +29,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
         width: 100%;
 }
   </style>
-
 </head>
+
 <body class ="bg-slate-100">
   <header class="bg-white shadow-sm" x-data="{ open: false }">
     <nav class="container mx-auto px-4 py-4">
@@ -61,54 +61,56 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 
 
   <!-- Hero -->
-  <section class="bg-white py-16 px-8 mx-4 my-16 px-4 font-epilogue font-base text-4xl">
-    <h1 class="font-epilogue text-6xl font-semibold text-left">Stay Charged, Stay Safe</h1>
+  <section class="bg-white py-16 px-8 px-4 font-epilogue font-base text-4xl">
+    
+    <h1 class=" text-6xl font-bold text-left">Stay Charged, Stay Safe</h1>
     <br>
-    <p class="p-4 text-xl bg-slate-100">Battery fire safety tips from UW HCDE’s team FireWise and the Bellevue Fire Department.
+    <p class="text-xl font-semibold text-orange-600">Battery fire safety tips from UW HCDE’s team FireWise and the Bellevue Fire Department.
     </p>
-    <p class="text-base mt-6 text-left">
+    <p class="text-base font-normal py-4 text-left">
       Lithium-ion batteries have become an integral part of our everyday lives, powering devices like smartphones, laptops, and electric vehicles. However, it is crucial to educate ourselves about their proper use, storage, and disposal to ensure safety. FireWise is dedicated to providing valuable resources and guidance on lithium-ion battery safety, helping you prevent potential hazards and make informed decisions. Together, we can create a safer environment and extend the lifespan of our devices.
     </p>
-    <br>
-    <p class="p-4 bg-amber-300 text-sm font-base">Find a battery recycling facility in Bellevue, Washington.</p>
-    <div class="container mx-auto my-16 px-4">
+</section>
+
+<article class="bg-emerald-500 text-white p-4 px-4" >
+    <p class="inline-block whitespace-no-wrap px-4 py-4 text-lg font-semibold">Find a battery recycling facility in Bellevue, Washington.</p>
+    <div class="container mx-auto my-2 px-4">
         <form id="recyclingForm" class="mb-8 text-lg">
           <label for="zipcode" class="text-base mr-2 font-semibold">Enter your zip code:</label>
-          <input type="text" id="zipcode" name="zipcode" class="border p-1 bg-white" required>
-          <button type="submit" class="bg-emerald-700 text-sm text-slate-50 px-4 py-2 my-2 rounded-md">Find Recycling Facilities</button>
+          <input type="text" id="zipcode" name="zipcode" class="mr-2 border p-1 bg-white" required>
+          <button type="submit" class="bg-emerald-900 text-sm text-slate-50 px-4 py-2 my-2 rounded-md">Find Recycling Facilities</button>
         </form>
         <div id="resultsContainer" class="text-base">
           <!-- The results will be displayed here -->
         </div>
       </div>
-</section>
+</article>
   
   
-    <section class="bg-white py-8 px-4 bg-slate-50 md:p-4 mx-auto max-w-7xl shadow-lg">
-        <div class="flex flex-wrap items-start">
-            <div class="px-4 w-full md:w-1/2">
-                <img src="https://github.com/raflaus/FireWise/blob/main/raf_battery.png?raw=true" alt="Family holding devices" class="w-full h-auto rounded-md shadow-md">
-            </div>
-            <div class="w-full py-8 md:w-1/2 m:p-4">
-                
-                <h2 class="px-2 text-3xl text-slate-800 font-semibold mt-8 md:mt-0">Quick Tips for Fire Prevention</h2>
-                <ul class="px-2 list-disc list-inside mt-6 space-y-2 text-base text-slate-500">
-                    <li>Don't store a battery fully charged for an extended period</li>
-                    <li>Make sure devices are UL certified</li>
-                    <li>Avoid overcharging your devices</li>
-                    <li>Keep batteries away from direct sunlight and heat sources</li>
-                    <li>Inspect batteries for any visible damage before use</li>
-                </ul>
-            </div>
+<section class="bg-white py-16 px-8 mx-8 my-8 font-epilogue font-base text-4xl">
+    <div class="flex flex-wrap items-start">
+        <div class="w-full md:w-1/2">
+            <img src="https://github.com/raflaus/FireWise/blob/main/raf_battery.png?raw=true" alt="Family holding devices" class="w-full h-auto rounded-md shadow-md">
         </div>
-    </section>
-    
-  <article class="bg-white py-16 container mx-auto my-16 px-4">
-    <h3 class="text-2xl py-4">Resources</h3>
-    <ul>
-        <li>Bellevue Fire Resources</li>
-    </ul>
-    </article>
+        <div class="w-full py-8 md:w-1/2 m:p-4">
+            <h2 class="px-2 text-3xl text-slate-800 font-semibold mt-8 md:mt-0">Quick Tips for Fire Prevention</h2>
+            <ul class="px-2 list-disc list-inside mt-6 space-y-2 text-base text-slate-500">
+                <li>Don't store a battery fully charged for an extended period</li>
+                <li>Make sure devices are UL certified</li>
+                <li>Avoid overcharging your devices</li>
+                <li>Keep batteries away from direct sunlight and heat sources</li>
+                <li>Inspect batteries for any visible damage before use</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<article class="bg-white py-16 px-4">
+        <h3 class="text-2xl py-4">Resources</h3>
+            <ul>
+                <li>Bellevue Fire Resources</li>
+            </ul>
+        </article>
 </body>
 </html>
 <script class="font-epilogue">
@@ -170,3 +172,4 @@ function displayRecyclingFacilities(facilities) {
 
 
 </script>
+ 
