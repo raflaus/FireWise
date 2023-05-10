@@ -31,86 +31,146 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
   </style>
 </head>
 
-<header class="bg-white shadow-sm" x-data="{ open: false }">
-    <h1>Batteries Section</h1>
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-               <a href="https://raflaus.github.io/firewise">
-  <img src="https://raw.githubusercontent.com/raflaus/FireWise/eed5e5b43d5c8bdac0ecb1cdcb4cd42595100226/images/FireWisewhite.svg" alt="FireWise" class="h-full w-auto">
-</a>
-
-                <div class="hidden md:flex space-x-4">
-                <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">About</a>
-                <a href="/Users/raflaus/NewEra/Alpha/battery.html" class="px-4 py-2 hover:bg-gray-100 rounded">Batteries</a>
-                <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">How-Tos</a>
-                <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">Bellevue Fire</a>
-                </div>
-                <button @click="open = !open" class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                </button>
-            </div>
-            <div class="md:hidden" x-show="open">
-                <div class="bg-gray-100 mt-2 p-4 rounded shadow-lg">
-                <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">About</a>
-                <a href="/Users/raflaus/NewEra/Alpha/battery.html" class="block px-4 py-2 hover:bg-gray-200 rounded">Batteries</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">How-Tos</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Bellevue Fire</a>
-                </div>
-            </div>
-            </nav>
+<body class ="bg-slate-100">
+  <header class="bg-white shadow-sm" x-data="{ open: false }">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="/Users/raflaus/NewEra/Alpha/src/index.html">        
+            <img src="https://raw.githubusercontent.com/raflaus/FireWise/eed5e5b43d5c8bdac0ecb1cdcb4cd42595100226/images/FireWisewhite.svg" alt="FireWise" class="h-full w-auto">
+        </a>
+        <div class="hidden md:flex space-x-4">
+          <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">About</a>
+          <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">Batteries</a>
+          <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">How-Tos</a>
+          <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">Bellevue Fire</a>
+        </div>
+        <button @click="open = !open" class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div class="md:hidden" x-show="open">
+        <div class="bg-gray-100 mt-2 p-4 rounded shadow-lg">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">About</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Batteries</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">How-Tos</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Bellevue Fire</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <section>
-    <article>
-      <h2>Rechargeable Batteries</h2>
-      <p>Rechargeable batteries are a great way to save money and reduce waste. They can be recharged hundreds of times and are available in a variety of sizes and chemistries. Some common types of rechargeable batteries include:</p>
-      <ul>
-        <li>Nickel Cadmium (Ni-Cd)</li>
-        <li>Nickel Metal Hydride (Ni-MH)</li>
-        <li>Lithium Ion (Li-Ion)</li>
-        <li>Lithium Polymer (Li-Po)</li>
-      </ul>
-    </article>
 
-    <aside>
-      <h3>Tips for Using Rechargeable Batteries</h3>
-      <ul>
-        <li>Charge batteries fully before use</li>
-        <li>Use a charger designed for the type of battery you have</li>
-        <li>Do not mix batteries of different types or brands</li>
-        <li>Store batteries in a cool, dry place</li>
-      </ul>
-    </aside>
-  </section>
+  <!-- Hero -->
+  <section class="bg-white py-16 px-8 px-4 font-epilogue font-base text-4xl">
+    
+    <h1 class=" text-6xl font-bold text-left">Stay Charged, Stay Safe</h1>
+    <br>
+    <p class="text-xl font-semibold text-orange-600">Battery fire safety tips from UW HCDE’s team FireWise and the Bellevue Fire Department.
+    </p>
+    <p class="text-base font-normal py-4 text-left">
+      Lithium-ion batteries have become an integral part of our everyday lives, powering devices like smartphones, laptops, and electric vehicles. However, it is crucial to educate ourselves about their proper use, storage, and disposal to ensure safety. FireWise is dedicated to providing valuable resources and guidance on lithium-ion battery safety, helping you prevent potential hazards and make informed decisions. Together, we can create a safer environment and extend the lifespan of our devices.
+    </p>
+</section>
 
-  <section>
-    <article>
-      <h2>Single Use Batteries</h2>
-      <p>Single use batteries, also known as disposable batteries, are designed to be used once and then discarded. They are available in a variety of sizes and chemistries, including:</p>
-      <ul>
-        <li>Alkaline</li>
-        <li>Lithium</li>
-        <li>Zinc Carbon</li>
-        <li>Zinc Chloride</li>
-      </ul>
-    </article>
+<article class="bg-gray-300 text-gray-900 p-8 px-4" >
+    <p class="inline-block whitespace-no-wrap px-4 py-4 text-lg font-semibold">Find a battery recycling facility in Bellevue, Washington.</p>
+    <div class="container mx-auto my-2 px-4">
+        <form id="recyclingForm" class="mb-8 text-lg">
+          <label for="zipcode" class="text-base mr-2 font-semibold">Enter your zip code:</label>
+          <input type="text" id="zipcode" name="zipcode" class="mr-2 border p-1 bg-white" required>
+          <button type="submit" class="bg-emerald-600 text-sm text-slate-50 px-4 py-2 my-2 rounded-md">Find Recycling Facilities</button>
+        </form>
+        <div id="resultsContainer" class="text-base">
+          <!-- The results will be displayed here -->
+        </div>
+      </div>
+</article>
+  
+  
+<section class="bg-white py-16 px-4 font-epilogue">
+    <div class="flex flex-wrap items-start">
+        <div class="w-full md:w-1/2">
+            <img src="https://github.com/raflaus/FireWise/blob/main/raf_battery.png?raw=true" alt="Family holding devices" class="w-screen h-auto rounded-md shadow-md">
+        </div>
+        <div class="w-full py-8 md:w-1/2 m:p-4">
+            <h2 class="px-2 text-3xl text-slate-800 font-semibold mt-8 md:mt-0 ml-4">Quick Tips for Fire Prevention</h2>
+            <ul class="px-2 list-disc list-inside mt-6 space-y-2 text-base text-slate-500 ml-4">
+                <li>Don't store a battery fully charged for an extended period</li>
+                <li>Make sure devices are UL certified</li>
+                <li>Avoid overcharging your devices</li>
+                <li>Keep batteries away from direct sunlight and heat sources</li>
+                <li>Inspect batteries for any visible damage before use</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-    <aside>
-      <h3>Tips for Using Single Use Batteries</h3>
-      <ul>
-        <li>Remove batteries from devices that will not be used for a while</li>
-        <li>Do not mix batteries of different types or brands</li>
-        <li>Store batteries in a cool, dry place</li>
-        <li>Dispose of batteries properly</li>
-      </ul>
-    </aside>
-  </section>
-
-  <footer>
-    <p>&copy; 2023 Batteries Section</p>
-  </footer>
-
+<article class="bg-white py-16 px-4">
+        <h3 class="text-2xl py-4">Resources</h3>
+            <ul>
+                <li>Bellevue Fire Resources</li>
+            </ul>
+        </article>
 </body>
 </html>
+<script class="font-epilogue">
+    document.getElementById('recyclingForm').addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const zipcode = document.getElementById('zipcode').value;
+  const apiKey = 'd51a7b032c754207bff33f47cf35ba32'; // Your OpenCage API key
+
+  const coordinates = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${zipcode}&key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.results.length > 0) {
+        return {
+          lat: data.results[0].geometry.lat,
+          lng: data.results[0].geometry.lng
+        };
+      } else {
+        return null;
+      }
+    });
+
+  if (coordinates) {
+    const facilities = await fetchRecyclingFacilities(coordinates); // Replace this function with the actual API call for recycling facilities
+    displayRecyclingFacilities(facilities);
+  } else {
+    alert('Could not find coordinates for the provided zip code');
+  }
+});
+
+async function fetchRecyclingFacilities(coordinates) {
+  // Replace this mock function with an actual API call or data fetching method
+  return [
+    { name: 'Recycling Facility 1', address: '123 Main St, Bellevue, WA 98004' },
+    { name: 'Recycling Facility 2', address: '456 Market St, Bellevue, WA 98004' },
+  ];
+}
+
+function displayRecyclingFacilities(facilities) {
+  const container = document.getElementById('resultsContainer');
+  container.innerHTML = '';
+
+  facilities.forEach(facility => {
+    const facilityElement = document.createElement('div');
+    facilityElement.classList.add('mb-4');
+
+    const nameElement = document.createElement('h3');
+    nameElement.textContent = facility.name;
+    nameElement.classList.add('font-bold');
+    facilityElement.appendChild(nameElement);
+
+    const addressElement = document.createElement('p');
+    addressElement.textContent = facility.address;
+    facilityElement.appendChild(addressElement);
+
+    container.appendChild(facilityElement);
+  });
+}
+
+
+</script>
