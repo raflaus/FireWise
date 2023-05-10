@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,9 +9,24 @@
   <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/outline.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v3.x.x/dist/cdn.min.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="./tailwind.css" rel="stylesheet">
+  <style>
+      body {
+          font-family: 'Epilogue', sans-serif;
+          background-color: #fdfffe;
+background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231c241d' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+      }
+      .parallax-section {
+        background-image: url('');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+}
+  </style>
 
 </head>
 <body class ="bg-slate-100">
@@ -42,18 +57,109 @@
     </nav>
   </header>
 
-  <section class="font-epilogue container mx-auto my-16 px-4">
-    <h1 class="font-semibold text-4xl font-bold text-left">Stay Charged, Stay Safe</h1>
-    <p class="font-500 text-lg mt-6 text-left">
-      Lithium-ion batteries have become an integral part of our everyday lives, powering devices like smartphones, laptops, and electric vehicles. However, it is crucial to educate ourselves about their proper use, maintenance, and disposal to ensure safety. FireWise is dedicated to providing valuable resources and guidance on lithium-ion battery safety, helping you prevent potential hazards and make informed decisions. Together, we can create a safer environment and extend the lifespan of our devices.
+  <section class="bg-white p-8 px-4 mx-auto my-16 px-4 font-epilogue font-base text-4xl">
+    <h1 class="font-epilogue text-8xl font-semibold text-left">Stay Charged, Stay Safe</h1>
+    <p class="text-base mt-6 text-left">
+      Lithium-ion batteries have become an integral part of our everyday lives, powering devices like smartphones, laptops, and electric vehicles. However, it is crucial to educate ourselves about their proper use, storage, and disposal to ensure safety. FireWise is dedicated to providing valuable resources and guidance on lithium-ion battery safety, helping you prevent potential hazards and make informed decisions. Together, we can create a safer environment and extend the lifespan of our devices.
     </p>
-  </section>
+    <br>
+    <h4 class="p-4 text-emerald-500">Find a battery recycling facility in Bellevue, Washington.</h4>
+    <div class="container mx-auto my-16 px-4">
+        <form id="recyclingForm" class="mb-8">
+          <label for="zipcode" class="text-base mr-2 font-semibold">Enter your zip code:</label>
+          <input type="text" id="zipcode" name="zipcode" class="border p-1" required>
+          <button type="submit" class="bg-blue-500 text-sm text-white px-4 py-1 rounded">Find Recycling Facilities</button>
+        </form>
+        <div id="resultsContainer">
+          <!-- The results will be displayed here -->
+        </div>
+      </div>
+</section>
+  
+  
+    <section class="bg-white py-8 px-4 bg-slate-50 md:p-4 mx-auto max-w-7xl shadow-lg">
+        <div class="flex flex-wrap items-start">
+            <div class="px-4 w-full md:w-1/2">
+                <img src="https://github.com/raflaus/FireWise/blob/main/raf_battery.png?raw=true" alt="Family holding devices" class="w-full h-auto rounded-md shadow-md">
+            </div>
+            <div class="w-full py-8 md:w-1/2 m:p-4">
+                
+                <h2 class="px-2 text-3xl text-slate-800 font-semibold mt-8 md:mt-0">Quick Tips for Fire Prevention</h2>
+                <ul class="px-2 list-disc list-inside mt-6 space-y-2 text-base text-slate-500">
+                    <li>Don't store a battery fully charged for an extended period</li>
+                    <li>Make sure devices are UL certified</li>
+                    <li>Avoid overcharging your devices</li>
+                    <li>Keep batteries away from direct sunlight and heat sources</li>
+                    <li>Inspect batteries for any visible damage before use</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
   <article class="container mx-auto my-16 px-4">
-    <h3 class="text-xl ">Resources</h3>
+    <h3 class="text-xl py-4">Resources</h3>
     <ul>
         <li>Bellevue Fire Resources</li>
     </ul>
     </article>
 </body>
 </html>
+<script>
+    document.getElementById('recyclingForm').addEventListener('submit', async function (event) {
+  event.preventDefault();
 
+  const zipcode = document.getElementById('zipcode').value;
+  const apiKey = 'd51a7b032c754207bff33f47cf35ba32'; // Your OpenCage API key
+
+  const coordinates = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${zipcode}&key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.results.length > 0) {
+        return {
+          lat: data.results[0].geometry.lat,
+          lng: data.results[0].geometry.lng
+        };
+      } else {
+        return null;
+      }
+    });
+
+  if (coordinates) {
+    const facilities = await fetchRecyclingFacilities(coordinates); // Replace this function with the actual API call for recycling facilities
+    displayRecyclingFacilities(facilities);
+  } else {
+    alert('Could not find coordinates for the provided zip code');
+  }
+});
+
+async function fetchRecyclingFacilities(coordinates) {
+  // Replace this mock function with an actual API call or data fetching method
+  return [
+    { name: 'Recycling Facility 1', address: '123 Main St, Bellevue, WA 98004' },
+    { name: 'Recycling Facility 2', address: '456 Market St, Bellevue, WA 98004' },
+  ];
+}
+
+function displayRecyclingFacilities(facilities) {
+  const container = document.getElementById('resultsContainer');
+  container.innerHTML = '';
+
+  facilities.forEach(facility => {
+    const facilityElement = document.createElement('div');
+    facilityElement.classList.add('mb-4');
+
+    const nameElement = document.createElement('h3');
+    nameElement.textContent = facility.name;
+    nameElement.classList.add('font-bold');
+    facilityElement.appendChild(nameElement);
+
+    const addressElement = document.createElement('p');
+    addressElement.textContent = facility.address;
+    facilityElement.appendChild(addressElement);
+
+    container.appendChild(facilityElement);
+  });
+}
+
+
+</script>
