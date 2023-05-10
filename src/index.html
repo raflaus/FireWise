@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Navigation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <title>Stay Charged, Stay Safe</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/outline.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="./tailwind.css" rel="stylesheet">
+
 </head>
-<body>
+<body class ="bg-slate-100">
   <header class="bg-white shadow-sm" x-data="{ open: false }">
-    <nav class="container mx-auto px-4 py-4 font-rubik">
+    <nav class="container mx-auto px-4 py-4 font-epilogue-600">
       <div class="flex justify-between items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>          
         <a href="#" class="text-xl font-bold">FireWise</a>
         <div class="hidden md:flex space-x-4">
           <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">About</a>
@@ -37,8 +45,18 @@
     </nav>
   </header>
 
-  <section>
-   
+  <section class="font-epilogue container mx-auto my-16 px-4">
+    <h1 class="font-semibold text-4xl font-bold text-left">Stay Charged, Stay Safe</h1>
+    <p class="font-500 text-lg mt-6 text-left">
+      Lithium-ion batteries have become an integral part of our everyday lives, powering devices like smartphones, laptops, and electric vehicles. However, it is crucial to educate ourselves about their proper use, maintenance, and disposal to ensure safety. FireWise is dedicated to providing valuable resources and guidance on lithium-ion battery safety, helping you prevent potential hazards and make informed decisions. Together, we can create a safer environment and extend the lifespan of our devices.
+    </p>
   </section>
+  <article class="container mx-auto my-16 px-4">
+    <h3 class="text-xl ">Resources</h3>
+    <ul>
+        <li>Bellevue Fire Resources</li>
+    </ul>
+    </article>
 </body>
 </html>
+
