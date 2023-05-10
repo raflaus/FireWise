@@ -64,114 +64,21 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 
 
   <!-- Hero -->
-  <section class="bg-white py-16 px-8 px-4 font-epilogue font-base text-4xl">
-    
-    <h1 class=" text-6xl font-bold text-left">Stay Charged, Stay Safe</h1>
-    <br>
-    <p class="text-xl font-semibold text-orange-600">Battery fire safety tips from UW HCDE’s team FireWise and the Bellevue Fire Department.
-    </p>
-    <p class="text-base font-normal py-4 text-left">
-      Lithium-ion batteries have become an integral part of our everyday lives, powering devices like smartphones, laptops, and electric vehicles. However, it is crucial to educate ourselves about their proper use, storage, and disposal to ensure safety. FireWise is dedicated to providing valuable resources and guidance on lithium-ion battery safety, helping you prevent potential hazards and make informed decisions. Together, we can create a safer environment and extend the lifespan of our devices.
-    </p>
-</section>
-
-<article class="bg-gray-300 text-gray-900 p-8 px-4" >
-    <p class="inline-block whitespace-no-wrap px-4 py-4 text-lg font-semibold">Find a battery recycling facility in Bellevue, Washington.</p>
-    <div class="container mx-auto my-2 px-4">
-        <form id="recyclingForm" class="mb-8 text-lg">
-          <label for="zipcode" class="text-base mr-2 font-semibold">Enter your zip code:</label>
-          <input type="text" id="zipcode" name="zipcode" class="mr-2 border p-1 bg-white" required>
-          <button type="submit" class="bg-emerald-600 text-sm text-slate-50 px-4 py-2 my-2 rounded-md">Find Recycling Facilities</button>
-        </form>
-        <div id="resultsContainer" class="text-base">
-          <!-- The results will be displayed here -->
-        </div>
-      </div>
-</article>
-  
-  
-<section class="bg-white py-16 px-4 font-epilogue">
-    <div class="flex flex-wrap items-start">
-        <div class="w-full md:w-1/2">
-            <img src="https://github.com/raflaus/FireWise/blob/main/raf_battery.png?raw=true" alt="Family holding devices" class="w-screen h-auto rounded-md shadow-md">
-        </div>
-        <div class="w-full py-8 md:w-1/2 m:p-4">
-            <h2 class="px-2 text-3xl text-slate-800 font-semibold mt-8 md:mt-0 ml-4">Quick Tips for Fire Prevention</h2>
-            <ul class="px-2 list-disc list-inside mt-6 space-y-2 text-base text-slate-500 ml-4">
-                <li>Don't store a battery fully charged for an extended period</li>
-                <li>Make sure devices are UL certified</li>
-                <li>Avoid overcharging your devices</li>
-                <li>Keep batteries away from direct sunlight and heat sources</li>
-                <li>Inspect batteries for any visible damage before use</li>
-            </ul>
-        </div>
+<span class="font-semibold text-xl tracking-tight">Battery Education</span>
     </div>
-</section>
-
-<article class="bg-white py-16 px-4">
-        <h3 class="text-2xl py-4">Resources</h3>
-            <ul>
-                <li>Bellevue Fire Resources</li>
-            </ul>
-        </article>
+    <div class="block lg:hidden">
+      <button class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray-300 hover:border-gray-300">
+        <svg class="h-3 w-3 fill-current" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm lg:flex-grow">
+        <a href="#safe-storage" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">
+          Safe Storage
+        </a>
+        <a href="#disposal-recycling" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">
+          Disposal/Recycling
+        </a>
+        <a href="#hazard-management" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white">
 </body>
 </html>
-<script class="font-epilogue">
-    document.getElementById('recyclingForm').addEventListener('submit', async function (event) {
-  event.preventDefault();
-
-  const zipcode = document.getElementById('zipcode').value;
-  const apiKey = 'd51a7b032c754207bff33f47cf35ba32'; // Your OpenCage API key
-
-  const coordinates = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${zipcode}&key=${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
-      if (data.results.length > 0) {
-        return {
-          lat: data.results[0].geometry.lat,
-          lng: data.results[0].geometry.lng
-        };
-      } else {
-        return null;
-      }
-    });
-
-  if (coordinates) {
-    const facilities = await fetchRecyclingFacilities(coordinates); // Replace this function with the actual API call for recycling facilities
-    displayRecyclingFacilities(facilities);
-  } else {
-    alert('Could not find coordinates for the provided zip code');
-  }
-});
-
-async function fetchRecyclingFacilities(coordinates) {
-  // Replace this mock function with an actual API call or data fetching method
-  return [
-    { name: 'Recycling Facility 1', address: '123 Main St, Bellevue, WA 98004' },
-    { name: 'Recycling Facility 2', address: '456 Market St, Bellevue, WA 98004' },
-  ];
-}
-
-function displayRecyclingFacilities(facilities) {
-  const container = document.getElementById('resultsContainer');
-  container.innerHTML = '';
-
-  facilities.forEach(facility => {
-    const facilityElement = document.createElement('div');
-    facilityElement.classList.add('mb-4');
-
-    const nameElement = document.createElement('h3');
-    nameElement.textContent = facility.name;
-    nameElement.classList.add('font-bold');
-    facilityElement.appendChild(nameElement);
-
-    const addressElement = document.createElement('p');
-    addressElement.textContent = facility.address;
-    facilityElement.appendChild(addressElement);
-
-    container.appendChild(facilityElement);
-  });
-}
-
-
-</script>
