@@ -32,18 +32,17 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
 </head>
 
 <body class ="bg-slate-100">
-  <header class="bg-white shadow-sm" x-data="{ open: false }">
+   <header class="bg-white shadow-sm" x-data="{ open: false }">
     <nav class="container mx-auto px-4 py-4">
-      <div class="flex justify-between items-center">
-        <a href="https://raflaus.github.io/FireWise"><img src="https://raw.githubusercontent.com/raflaus/FireWise/eed5e5b43d5c8bdac0ecb1cdcb4cd42595100226/images/FireWisewhite.svg" alt="FireWise-Logo" class="h-full w-auto">
-        </a>
+      <div class="flex justify-between items-center"> 
+        <a href="https://raflaus.github.io/FireWise"><img src="images/FireWisewhite.svg" alt="FireWise" class="h-full w-auto">
+</a>
+
         <div class="hidden md:flex space-x-4">
           <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">About</a>
-          <a href="battery.html" class="px-4 py-2 hover:bg-gray-100 rounded">Batteries</a>
+          <a href="https://github.com/raflaus/FireWise/blob/284259aba3116637eb2be6bbf075963822679082/battery.html" class="px-4 py-2 hover:bg-gray-100 rounded">Batteries</a>
           <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">How-Tos</a>
           <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">Bellevue Fire</a>
-          <a href="https://www.bellevuewa.gov/city-government/departments/fire" class="px-4 py-2 hover:bg-gray-100 rounded">Bellevue Fire</a>
-
         </div>
         <button @click="open = !open" class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,13 +53,14 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
       <div class="md:hidden" x-show="open">
         <div class="bg-gray-100 mt-2 p-4 rounded shadow-lg">
           <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">About</a>
-          <a href="battery.html" class="block px-4 py-2 hover:bg-gray-200 rounded">Batteries</a>
+          <a href="https://github.com/raflaus/FireWise/blob/284259aba3116637eb2be6bbf075963822679082/battery.html" class="block px-4 py-2 hover:bg-gray-200 rounded">Batteries</a>
           <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">How-Tos</a>
-          <a href="https://www.bellevuewa.gov/city-government/departments/fire" class="px-4 py-2 hover:bg-gray-100 rounded">Bellevue Fire</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Bellevue Fire</a>
         </div>
       </div>
     </nav>
   </header>
+
 
 
   <!-- Hero -->
