@@ -8,8 +8,32 @@
 </head>
 <body>
 
-  <header>
+<headerclass="bg-white shadow-sm" x-data="{ open: false }">
     <h1>Batteries Section</h1>
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <img src="https://raw.githubusercontent.com/raflaus/FireWise/eed5e5b43d5c8bdac0ecb1cdcb4cd42595100226/images/FireWisewhite.svg" alt="FireWise" class="h-full w-auto">
+                <div class="hidden md:flex space-x-4">
+                <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">About</a>
+                <a href="/Users/raflaus/NewEra/Alpha/battery.html" class="px-4 py-2 hover:bg-gray-100 rounded">Batteries</a>
+                <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">How-Tos</a>
+                <a href="#" class="px-4 py-2 hover:bg-gray-100 rounded">Bellevue Fire</a>
+                </div>
+                <button @click="open = !open" class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                </button>
+            </div>
+            <div class="md:hidden" x-show="open">
+                <div class="bg-gray-100 mt-2 p-4 rounded shadow-lg">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">About</a>
+                <a href="/Users/raflaus/NewEra/Alpha/battery.html" class="block px-4 py-2 hover:bg-gray-200 rounded">Batteries</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">How-Tos</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200 rounded">Bellevue Fire</a>
+                </div>
+            </div>
+            </nav>
   </header>
 
   <section>
