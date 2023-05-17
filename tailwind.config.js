@@ -18,15 +18,22 @@ module.exports = {
           '800': '800',
           '900': '900',
         },
-        backgroundColor: {
-          tomato: '#F95738',
-        },
-        textColor: {
-          tomato: '#F95738',
-        },
-        borderColor: {
-          tomato: '#F95738',
-        },
+  "colors": {
+    "FWColorsSecondary": {
+      50: "#FEEEEB",
+      100: "#FEDED7",
+      200: "#FDBDB0",
+      300: "#FB9B88",
+      400: "#FA7A61",
+      500: "#F95738",
+      600: "#EE2E07",
+      700: "#B22205",
+      800: "#771704",
+      900: "#3B0B02",
+      950: "#1E0601"
+    }
+  }
+}
       },
     },
     variants: {},
