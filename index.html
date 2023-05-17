@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FireWise</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/outline.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v3.x.x/dist/cdn.min.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-</head>
-  <!-- Nav -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.5/dist/outline.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   
-  <header class="bg-white shadow-sm" x-data="{ open: false }">
-      <nav class="container mx-2 px-4 py-4">
-        <div class="flex justify-between items-center"> 
-          <a href="https://raflaus.github.io/FireWise"><img src="images/FIreWiseblack.svg" alt="FireWise" class="h-full w-2/3">
-  </a>
-          <div class="hidden md:flex space-x-4">
-            <a href="./about.html" class="px-4 py-2 hover:bg-gray-100 rounded">About</a>
-            <a href="./batteries.html" class="px-4 py-2 hover:bg-gray-100 rounded">Batteries</a>
-            <a href="./how-tos.html" class="px-4 py-2 hover:bg-gray-100 rounded">How-Tos</a>
+</head>
+<header class="bg-white shadow-sm" x-data="{ open: false }">
+        <nav class="container mx-auto px-4 py-4">
+          <div class="flex justify-between items-center"> 
+            <a href="https://raflaus.github.io/FireWise"><img src="images/FIreWiseblack.svg" alt="FireWise" class="h-full w-2/3">
+    </a>
+            <div class="hidden md:flex space-x-4">
+              <a href="./about.html" class="px-4 py-2 hover:bg-gray-100 rounded">About</a>
+              <a href="./batteries.html" class="px-4 py-2 hover:bg-gray-100 rounded">Batteries</a>
+              <a href="./how-tos.html" class="px-4 py-2 hover:bg-gray-100 rounded">How-Tos</a>    
+            </div>
+            
+            <button @click="open = !open" class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
-
-          <button @click="open = !open" class="md:hidden p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-        <div class="md:hidden" x-show="open">
-          <div class="bg-gray-100 mt-2 p-4 rounded shadow-lg">
-            <a href="./about.html" class="block px-4 py-2 hover:bg-gray-200 rounded">About</a>
-            <a href="./batteries.html" class="block px-4 py-2 hover:bg-gray-200 rounded">Batteries</a>
-            <a href="./how-tos.html" class="block px-4 py-2 hover:bg-gray-200 rounded">How-Tos</a>          
+          <div class="md:hidden" x-show="open">
+            <div class="bg-gray-100 mt-2 p-4 rounded shadow-lg">
+              <a href="./about.html" class="block px-4 py-2 hover:bg-gray-200 rounded">About</a>
+              <a href="./batteries.html" class="block px-4 py-2 hover:bg-gray-200 rounded">Batteries</a>
+              <a href="./how-tos.html" class="block px-4 py-2 hover:bg-gray-200 rounded">How-Tos</a>
+            </div>
           </div>
-        </div>
-      </nav>
-    </header>
-<body class ="bg-slate-100 subpixel-antialiased">
-
-
+        </nav>
+</header>
+  
+  
+<body class="bg-white">
   <!-- Hero -->
   <section class="bg-white py-16 px-4 py-4 flex justify-between items-center">
     <h1 class=" text-6xl font-bold text-left">Stay Charged, Stay Safe</h1>
@@ -55,9 +55,9 @@
 </section>
 
 
-  <!-- Recycling Center -->
+    <!-- Recycling Center -->
 
-<article class="bg-emerald-500 text-white py-4 px-10" >
+<section class="bg-emerald-500 text-white py-4 px-10" >
     <p class="inline-block whitespace-no-wrap px-4 py-4 text-lg font-semibold text-gray-900">Find a battery recycling facility in Washington.</p>
     <div class="container mx-auto my-2 px-4">
         <form id="recyclingForm" class="mb-8 text-lg">
@@ -69,7 +69,7 @@
           <!-- The results will be displayed here -->
         </div>
       </div>
-</article>
+</section>
 
 <article class="bg-white px-4 py-4">
         <ul class="justify-items-start">
@@ -78,10 +78,13 @@
           <li>2023 HCDE Capstone</li>
           <li class="text-sm">designed by Raf Laus</li>
         </ul>
-        </article>
+</article>
         
 </body>
 </html>
+
+
+
 
 
 
